@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | PS Fin Solutions</title>
+  <meta name="description" content="Contact PS Fin Solutions for a free consultation about credit repair support, bookkeeping, or virtual assistant services." />
+  <meta name="theme-color" content="#0c0620" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="cursor-light" id="cursorLight"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/"><span class="logo"><img src="/assets/logo.svg" alt="PS Fin Solutions logo" /></span><span>PS Fin Solutions</span></a>
+        <button class="menuBtn" data-menu aria-expanded="false" aria-controls="navlinks">Menu</button>
+        <div class="navlinks" id="navlinks">
+          <a href="/services/">Services</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/team/">Team</a>
+          <a href="/contact/">Contact</a>
+          <a href="/smart-clock/">Smart Clock</a>
+        </div>
+        <div class="ctaRow">
+          <a class="btn btn-ghost" href="/contact/">Free Consultation</a>
+          <a class="btn btn-primary" href="#lead">Get Started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="pageHead">
+      <div class="container">
+        <h1>Get in Touch</h1>
+        <p>
+          Tell us what you need (credit repair support, bookkeeping, or VA). We'll reply with next steps within 24 business hours.
+        </p>
+        <div class="pageHead-img reveal-scale">
+          <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=900&h=350&fit=crop&q=80" alt="Professional communication and contact" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <section class="section" id="lead">
+      <div class="container">
+        <div class="kpis">
+          <div class="card kpiBox reveal-left">
+            <h2 style="margin:0 0 8px;">Request a free consultation</h2>
+            <p style="margin:0 0 20px;color:var(--muted);">
+              Fill out the form and we'll get back to you with a clear plan.
+            </p>
+
+            <!-- Contact form via Formsubmit.co -->
+            <form class="form" id="contactForm" action="https://formsubmit.co/ajax/info@psfinsolutions.com" method="POST">
+              <input type="hidden" name="_subject" value="New Inquiry from PS Fin Solutions Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" style="display:none" />
+
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" required placeholder="John Smith" />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="john@email.com" />
+              </div>
+
+              <div class="field">
+                <label for="service">Service needed</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Credit Repair Support</option>
+                  <option>Accounting & Bookkeeping</option>
+                  <option>Virtual Assistant</option>
+                  <option>Bundle (Multiple Services)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="goal">Your goal</label>
+                <textarea id="goal" name="goal" required placeholder="Example: I want to prepare for a mortgage in 6 months / I need monthly bookkeeping / I need a VA for admin tasks..."></textarea>
+              </div>
+
+              <div class="row">
+                <button class="btn btn-primary btn-lg" type="submit" id="submitBtn">Send Inquiry</button>
+                <a class="btn" href="/pricing/">View Pricing</a>
+              </div>
+
+              <div id="formResult"></div>
+
+              <p class="note">
+                Privacy: Please do not send SSNs or highly sensitive personal data via email.
+              </p>
+            </form>
+          </div>
+
+          <aside class="callout reveal-right">
+            <h3 style="margin:0 0 12px;">Contact details</h3>
+
+            <div style="margin-bottom:20px;">
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=200&fit=crop&q=80" alt="Professional customer support team" loading="lazy" style="border-radius:14px;width:100%;height:160px;object-fit:cover;margin-bottom:16px;" />
+            </div>
+
+            <p style="margin:0 0 12px;"><b>Email:</b> <span class="small">info@psfinsolutions.com</span></p>
+            <p style="margin:0 0 12px;"><b>Phone/WhatsApp:</b> <span class="small">+91-9809970890</span></p>
+            <p style="margin:0;"><b>Hours:</b> <span class="small">US-friendly response windows available</span></p>
+
+            <div class="hr"></div>
+
+            <h3 style="margin:0 0 8px;">Credit repair disclosure</h3>
+            <p class="small" style="margin:0;">
+              We provide administrative and educational support. We are not a law firm and do not provide legal advice.
+              Results vary; no outcome is guaranteed.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <!-- SCHEDULE A CONSULTATION - Calendar Widget -->
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="sectionTitle reveal">
+          <h2>Schedule a Consultation</h2>
+          <p>Pick a date to book your free consultation with our team.</p>
+        </div>
+
+        <div class="calendar-widget card reveal-scale" id="calendarWidget">
+          <div class="calendar-header">
+            <button class="calendar-nav-btn" id="calPrev" aria-label="Previous month">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/></svg>
+            </button>
+            <h3 class="calendar-month-label" id="calMonthLabel"></h3>
+            <button class="calendar-nav-btn" id="calNext" aria-label="Next month">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="calendar-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="calendar-days" id="calDays"></div>
+          <div class="calendar-footer">
+            <p class="calendar-footer-note">Select any date to open our scheduling page</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p style="margin:0;">
+        &copy; <span id="year"></span> PS Fin Solutions &bull; <a href="/faq/">FAQ</a> &bull; <a href="/team/">Team</a>
+      </p>
+      <p class="small" style="margin:8px 0 0;">
+        Disclaimer: We are not a law firm and do not provide legal advice. Credit repair results vary; no outcome is guaranteed.
+      </p>
+    </div>
+  </footer>
+
+  <script src="/assets/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Formsubmit.co contact form handler
+    const form = document.getElementById("contactForm");
+    const resultDiv = document.getElementById("formResult");
+    const submitBtn = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+      resultDiv.innerHTML = "";
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const data = await res.json();
+        if (data.success) {
+          resultDiv.innerHTML = '<p class="form-success">\u2713 Message sent! We\u2019ll get back to you within 24 business hours.</p>';
+          form.reset();
+        } else {
+          resultDiv.innerHTML = '<p class="form-error">Something went wrong. Please try again or email us directly at info@psfinsolutions.com</p>';
+        }
+      } catch (err) {
+        resultDiv.innerHTML = '<p class="form-error">Network error. Please try again or email us at info@psfinsolutions.com</p>';
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Inquiry";
+    });
+  </script>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919809970890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</body>
+</html>
