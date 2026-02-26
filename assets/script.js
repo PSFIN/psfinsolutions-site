@@ -227,4 +227,58 @@
     triggers.forEach(function(btn) { btn.addEventListener("click", function(e) { e.preventDefault(); openModal(); }); });
   }
   initCalendarModal();
+
+  // ========== RESULTS SHOWCASE (Auto-updating from Instagram via Behold.so) ==========
+  // This fetches the latest posts from @fixsy_fixiteasy via Behold JSON feed.
+  // To change the feed, update the URL below with your Behold feed ID.
+  var BEHOLD_FEED_URL = "https://feeds.behold.so/LoiErYXtn0eVqz70LJsZ";
+
+  var resultsTrack = document.querySelector(".results-track");
+  if (resultsTrack) {
+    fetch(BEHOLD_FEED_URL)
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        var posts = data.posts || [];
+        if (!posts.length) return;
+        posts.forEach(function(post) {
+          var card = document.createElement("a");
+          card.className = "result-card";
+          card.href = post.permalink || "#";
+          card.target = "_blank";
+          card.rel = "noopener noreferrer";
+          // Use medium size image (optimized from Behold CDN)
+          var imgUrl = (post.sizes && post.sizes.medium) ? post.sizes.medium.mediaUrl : (post.thumbnailUrl || post.mediaUrl);
+          var caption = (post.prunedCaption || "").split("\n")[0]; // First line only
+          var safeCaption = caption.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+          card.innerHTML =
+            '<img src="' + imgUrl + '" alt="Credit repair result" loading="lazy" />' +
+            '<div class="result-card__footer">' +
+              '<span class="result-card__caption">' + safeCaption + '</span>' +
+              '<span class="result-card__ig">View on IG</span>' +
+            '</div>';
+          resultsTrack.appendChild(card);
+        });
+        // Re-init arrow scroll after cards loaded
+        initResultsArrows();
+      })
+      .catch(function(err) {
+        console.log("Results feed unavailable:", err);
+      });
+  }
+
+  // Results carousel arrow scroll
+  function initResultsArrows() {
+    var resultsArrows = document.querySelectorAll(".results-arrow");
+    if (resultsTrack && resultsArrows.length) {
+      resultsArrows.forEach(function(arrow) {
+        arrow.addEventListener("click", function() {
+          var dir = parseInt(this.getAttribute("data-dir"), 10);
+          var cardW = resultsTrack.querySelector(".result-card");
+          var scrollAmount = cardW ? cardW.offsetWidth + 20 : 340;
+          resultsTrack.scrollBy({ left: dir * scrollAmount, behavior: "smooth" });
+        });
+      });
+    }
+  }
+  initResultsArrows();
 })();
