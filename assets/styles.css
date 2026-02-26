@@ -2135,3 +2135,31 @@ input:focus, textarea:focus, select:focus{
 @media(max-width:480px){
   .result-card{ flex: 0 0 260px; }
 }
+
+/* ========== UPWORK FEEDBACK GRID ========== */
+.feedback-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.feedback-card{
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+.feedback-card:hover{
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.feedback-card img{
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+@media(max-width:768px){
+  .feedback-grid{ grid-template-columns: 1fr; }
+}
