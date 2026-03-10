@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Smart Clock | PS Fin Solutions</title>
   <meta name="description" content="PS Fin Solutions employee time tracking, clock in/out, and project management portal." />
-  <meta name="theme-color" content="#0c0620" />
+  <meta name="theme-color" content="#0a0e17" />
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
   <link rel="stylesheet" href="/assets/styles.css" />
   <style>
@@ -17,7 +17,7 @@
       overflow: hidden;
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
-      background: rgba(255,255,255,0.02);
+      background: var(--card);
     }
     .timesheet-wrapper iframe{
       width: 100%;
@@ -39,8 +39,8 @@
     .timesheet-info-card{
       padding: 20px;
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      background: var(--card);
       text-align: center;
     }
     .timesheet-info-card .icon{
@@ -68,7 +68,6 @@
   <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0132/3546.js" async="async"></script>
 </head>
 <body>
-  <div class="cursor-light" id="cursorLight"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="header">

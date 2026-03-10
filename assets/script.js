@@ -53,39 +53,15 @@
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
       if (scrollY > 80) {
-        header.style.background = "rgba(20,14,48,0.95)";
+        header.style.background = "rgba(10,14,23,0.95)";
       } else {
-        header.style.background = "rgba(20,14,48,0.80)";
+        header.style.background = "rgba(10,14,23,0.85)";
       }
       lastScroll = scrollY;
     }, { passive: true });
   }
 
-  // Cursor light effect
-  const cursorLight = document.getElementById("cursorLight");
-  if (cursorLight) {
-    let mouseX = 0, mouseY = 0;
-    let lightX = 0, lightY = 0;
-
-    document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    }, { passive: true });
-
-    function animateLight() {
-      lightX += (mouseX - lightX) * 0.15;
-      lightY += (mouseY - lightY) * 0.15;
-      cursorLight.style.left = lightX + "px";
-      cursorLight.style.top = lightY + "px";
-      requestAnimationFrame(animateLight);
-    }
-    animateLight();
-
-    // Hide on mobile / touch
-    document.addEventListener("touchstart", () => {
-      cursorLight.style.opacity = "0";
-    }, { once: true, passive: true });
-  }
+  // (cursor light effect removed — using grid bg instead)
 
   // Calendar Booking Widget
   var calWidget = document.getElementById("calendarWidget");
