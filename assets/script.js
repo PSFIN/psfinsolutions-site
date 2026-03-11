@@ -10,6 +10,28 @@
     });
   }
 
+  // Nav dropdown toggle
+  const dropdownEl = document.querySelector('.nav-dropdown');
+  const dropdownBtn = dropdownEl && dropdownEl.querySelector('.nav-dropdown__toggle');
+  if (dropdownBtn) {
+    dropdownBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdownEl.classList.toggle('open');
+      dropdownBtn.setAttribute('aria-expanded', dropdownEl.classList.contains('open'));
+    });
+    document.addEventListener('click', function() {
+      dropdownEl.classList.remove('open');
+      dropdownBtn.setAttribute('aria-expanded', 'false');
+    });
+    // Close dropdown when mobile menu closes
+    if (btn) {
+      btn.addEventListener('click', function() {
+        dropdownEl.classList.remove('open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
   // Smooth scroll for same-page anchor links
   document.addEventListener("click", (e) => {
     const a = e.target.closest('a[href^="#"]');

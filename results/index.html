@@ -31,15 +31,19 @@
           <a href="/services/">Services</a>
           <a href="/pricing/">Pricing</a>
           <a href="/results/">Results</a>
-          <a href="/faq/">FAQ</a>
-          <a href="/team/">Team</a>
-          <a href="/careers/">Careers</a>
           <a href="/contact/">Contact</a>
-          <a href="/smart-clock/">Smart Clock</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__toggle" aria-expanded="false">More <span class="nav-dropdown__arrow">▾</span></button>
+            <div class="nav-dropdown__menu">
+              <a href="/faq/">FAQ</a>
+              <a href="/team/">Team</a>
+              <a href="/careers/">Careers</a>
+              <a href="/smart-clock/">Smart Clock</a>
+            </div>
+          </div>
         </div>
         <div class="ctaRow">
-          <a class="btn btn-ghost" href="/contact/">Free Consultation</a>
-          <a class="btn btn-primary" href="/contact/#lead">Get Started</a>
+          <a class="btn btn-primary" href="/contact/#lead">Free Review</a>
         </div>
       </nav>
     </div>
@@ -71,8 +75,48 @@
         <p class="results-disclaimer reveal">
           Results from actual client files (redacted). Individual outcomes vary. No score increase is guaranteed.
         </p>
+
+        <!-- Score Improvement Reports Gallery -->
+        <div class="sectionTitle reveal" style="margin-top:60px;">
+          <div class="section-label">// Score reports</div>
+          <h2>Score Improvement Reports</h2>
+          <p>Detailed credit re-import summaries showing real score increases across all three bureaus.</p>
+        </div>
+        <div class="report-carousel reveal">
+          <button class="report-arrow report-arrow--left" aria-label="Scroll left" data-report-dir="-1">&#8249;</button>
+          <button class="report-arrow report-arrow--right" aria-label="Scroll right" data-report-dir="1">&#8250;</button>
+          <div class="report-carousel__track">
+            <div class="report-card" data-lightbox="0">
+              <img src="/assets/results/credit-results-01.png" alt="Credit score improvement — Equifax 635 (+81), Experian 699 (+132), TransUnion 692 (+132), 31 disputes deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
+            </div>
+            <div class="report-card" data-lightbox="1">
+              <img src="/assets/results/credit-results-02.png" alt="Credit score improvement — Equifax 727 (+87), Experian 729 (+89), TransUnion 729 (+87), 49 disputes deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
+            </div>
+            <div class="report-card" data-lightbox="2">
+              <img src="/assets/results/credit-results-03.png" alt="Credit score improvement — Equifax 633 (+38), Experian 711 (+137), TransUnion 717 (+133), 74 disputes deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
+            </div>
+            <div class="report-card" data-lightbox="3">
+              <img src="/assets/results/credit-results-04.png" alt="Credit score improvement — Equifax 751 (+114), Experian 715 (+136), TransUnion 769 (+121), 19 disputes deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>
+      <button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>
+      <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="Credit report detail" />
+      </div>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
 
     <div class="gradient-divider"></div>
 
@@ -226,6 +270,65 @@
 
   <script src="/assets/script.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <!-- Report Carousel Arrows -->
+  <script>
+  (function(){
+    var track = document.querySelector('.report-carousel__track');
+    if (!track) return;
+    document.querySelectorAll('[data-report-dir]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var dir = parseInt(this.getAttribute('data-report-dir'), 10);
+        track.scrollBy({ left: dir * 440, behavior: 'smooth' });
+      });
+    });
+  })();
+  </script>
+
+  <!-- Lightbox Script -->
+  <script>
+  (function(){
+    var images = [
+      '/assets/results/credit-results-01.png',
+      '/assets/results/credit-results-02.png',
+      '/assets/results/credit-results-03.png',
+      '/assets/results/credit-results-04.png'
+    ];
+    var overlay = document.getElementById('lightboxOverlay');
+    var lbImg = document.getElementById('lightboxImg');
+    var counter = document.getElementById('lightboxCounter');
+    var current = 0;
+
+    function show(i){
+      current = i;
+      lbImg.src = images[i];
+      counter.textContent = (i+1) + ' / ' + images.length;
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function hide(){
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-lightbox]').forEach(function(card){
+      card.addEventListener('click', function(){
+        show(parseInt(this.getAttribute('data-lightbox'),10));
+      });
+    });
+
+    overlay.querySelector('.lightbox-close').addEventListener('click', hide);
+    overlay.querySelector('.lightbox-prev').addEventListener('click', function(){ show((current - 1 + images.length) % images.length); });
+    overlay.querySelector('.lightbox-next').addEventListener('click', function(){ show((current + 1) % images.length); });
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) hide(); });
+    document.addEventListener('keydown', function(e){
+      if(!overlay.classList.contains('active')) return;
+      if(e.key === 'Escape') hide();
+      if(e.key === 'ArrowLeft') show((current - 1 + images.length) % images.length);
+      if(e.key === 'ArrowRight') show((current + 1) % images.length);
+    });
+  })();
+  </script>
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/919809970890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
