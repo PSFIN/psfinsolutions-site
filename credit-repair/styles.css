@@ -532,6 +532,33 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; line-height: 1.15; }
   margin-top: 2px;
 }
 
+/* ===== REPORT SCROLL ===== */
+.report-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+.report-scroll::-webkit-scrollbar { display: none; }
+.report-scroll__card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.report-scroll__card img {
+  width: 100%;
+  display: block;
+}
+@media (max-width: 480px) {
+  .report-scroll__card { flex: 0 0 260px; }
+}
+
 /* ===== STICKY CTA (mobile) ===== */
 .sticky-cta {
   position: fixed;
