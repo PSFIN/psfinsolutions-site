@@ -1,0 +1,96 @@
+/* Software pages (home, Smart Clock, custom software). Builds on styles.css. */
+
+.hero-sc { padding: 72px 0 40px; }
+.hero-sc .hTitle { font-size: clamp(34px, 5.2vw, 60px); line-height: 1.08; margin: 18px 0 16px; }
+.hero-sc .hSub { max-width: 640px; }
+.hero-shot { margin-top: 44px; position: relative; }
+.hero-shot img, .shot {
+  width: 100%; height: auto; display: block; border-radius: 14px;
+  border: 1px solid var(--line); box-shadow: var(--shadow), var(--glow);
+}
+.hero-shot::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 38%;
+  background: linear-gradient(180deg, rgba(10,14,23,0) 0%, var(--bg) 92%);
+  border-radius: 0 0 14px 14px; pointer-events: none;
+}
+.hero-shot img { max-height: 640px; object-fit: cover; object-position: top; }
+.feature-media .shot { max-height: 520px; object-fit: cover; object-position: top left; }
+.shot-cap { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.pain { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.pain h3 { margin: 0 0 6px; font-size: 18px; }
+.pain p { margin: 0; color: var(--muted); }
+.pain .q { font-family: 'Space Grotesk', sans-serif; color: var(--brand); font-size: 15px; margin-bottom: 8px; }
+
+.feature-row { display: grid; grid-template-columns: 1.15fr 1fr; gap: 44px; align-items: center; margin: 64px 0; }
+.feature-row.flip { grid-template-columns: 1fr 1.15fr; }
+.feature-row.flip .feature-media { order: 2; }
+.feature-row h2 { margin: 6px 0 12px; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; }
+.feature-row p { color: var(--muted); }
+.ticks { list-style: none; padding: 0; margin: 16px 0 0; }
+.ticks li { position: relative; padding-left: 28px; margin: 0 0 10px; }
+.ticks li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--brand); font-weight: 700; }
+
+.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.price-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius2); padding: 26px 24px; display: flex; flex-direction: column; }
+.price-card.featured { border-color: rgba(0,255,136,.55); box-shadow: var(--glow); background: linear-gradient(180deg, rgba(0,255,136,.06), var(--card) 40%); }
+.price-card .label { font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--brand); font-weight: 700; }
+.price-card .amount { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; line-height: 1; margin: 12px 0 4px; }
+.price-card .per { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+.price-card .ticks { flex: 1; }
+.price-card .btn { margin-top: 12px; justify-content: center; }
+
+.cmp-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+table.cmp { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 15px; }
+table.cmp th, table.cmp td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+table.cmp tr:last-child td { border-bottom: 0; }
+table.cmp th { font-size: 12px; letter-spacing: .8px; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+table.cmp .us { background: rgba(0,255,136,.06); color: var(--text); font-weight: 600; }
+table.cmp th.us { color: var(--brand); }
+table.cmp .big { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; }
+table.cmp .y { color: var(--brand); font-weight: 700; }
+.src-note { font-size: 12.5px; color: var(--muted2); margin-top: 10px; }
+
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.product { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius2); padding: 24px; display: flex; flex-direction: column; }
+.product.live { border-color: rgba(0,255,136,.45); }
+.product .status { align-self: flex-start; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
+.product .status.on { color: #04130b; background: var(--brand); }
+.product .status.soon { color: var(--muted); border: 1px solid var(--line); }
+.product h3 { margin: 0 0 6px; font-size: 20px; }
+.product p { color: var(--muted); margin: 0 0 16px; flex: 1; }
+
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.step::before { counter-increment: step; content: counter(step); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(0,255,136,.12); color: var(--brand); font-weight: 700; margin-bottom: 12px; }
+.step h3 { margin: 0 0 6px; font-size: 17px; }
+.step p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.founder { display: grid; grid-template-columns: 140px 1fr; gap: 28px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius2); padding: 28px; }
+.founder img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(0,255,136,.4); }
+.founder h3 { margin: 0 0 8px; font-size: 22px; }
+.founder p { margin: 0 0 10px; color: var(--muted); }
+
+.faq-list details { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 10px; }
+.faq-list summary { cursor: pointer; font-weight: 600; }
+.faq-list details p { color: var(--muted); margin: 10px 0 0; }
+
+.robot-float { width: 120px; float: right; margin: 0 0 12px 18px; }
+
+@media (max-width: 980px) {
+  .feature-row, .feature-row.flip { grid-template-columns: 1fr; gap: 22px; margin: 44px 0; }
+  .feature-row.flip .feature-media { order: 0; }
+  .price-grid, .product-grid, .pain-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hero-sc { padding: 44px 0 24px; }
+  .steps { grid-template-columns: 1fr; }
+  .founder { grid-template-columns: 1fr; text-align: center; }
+  .founder img { margin: 0 auto; }
+  .robot-float { width: 90px; }
+}
+
+/* Slide-in animations start off-screen; keep them from widening the page on phones. */
+main { overflow-x: clip; }
