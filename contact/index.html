@@ -4,10 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | PS Fin Solutions</title>
-  <meta name="description" content="Contact PS Fin Solutions for a free consultation about credit repair support, bookkeeping, or virtual assistant services." />
+  <meta name="description" content="Request a free credit review from PS Fin Solutions, or ask about dispute processing for your credit repair company." />
   <meta name="theme-color" content="#0a0e17" />
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/credit.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BK7LM1M92S"></script>
   <script>
@@ -42,26 +43,31 @@
   <header class="header">
     <div class="container">
       <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="/"><span class="logo"><img src="/assets/logo.svg" alt="PS Fin Solutions logo" /></span><span>PS Fin Solutions</span></a>
+        <a class="brand" href="/" aria-label="PS Fin Solutions Home">
+          <span class="logo" aria-hidden="true"><img src="/assets/logo.svg" alt="PS Fin Solutions logo" /></span>
+          <span>PS Fin Solutions</span>
+        </a>
+
         <button class="menuBtn" data-menu aria-expanded="false" aria-controls="navlinks">Menu</button>
+
         <div class="navlinks" id="navlinks">
-          <a href="/smart-clock/">Smart Clock</a>
-          <a href="/software/">Custom Software</a>
-          <a href="/services/">Services</a>
-          <a href="/contact/">Contact</a>
+          <a href="/services/">Credit Repair</a>
+          <a href="/for-companies/">For Companies</a>
+          <a href="/results/">Results</a>
+          <a href="/pricing/">Pricing</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__toggle" aria-expanded="false">More <span class="nav-dropdown__arrow">▾</span></button>
             <div class="nav-dropdown__menu">
-              <a href="/pricing/">Service pricing</a>
-              <a href="/results/">Results</a>
+              <a href="/faq/">FAQ</a>
               <a href="/team/">Team</a>
               <a href="/careers/">Careers</a>
-              <a href="/faq/">FAQ</a>
+              <a href="/contact/">Contact</a>
             </div>
           </div>
         </div>
+
         <div class="ctaRow">
-          <a class="btn btn-primary" href="#lead">Free Review</a>
+          <a class="btn btn-primary" href="/contact/#lead">Free Credit Review</a>
         </div>
       </nav>
     </div>
@@ -70,9 +76,9 @@
   <main id="main">
     <section class="pageHead">
       <div class="container">
-        <h1>Get in Touch</h1>
+        <h1>Get Your Free Credit Review</h1>
         <p>
-          Tell us what you need (credit repair support, bookkeeping, or VA). We'll reply with next steps within 24 business hours.
+          Tell us about your goal and we’ll reply with next steps within 24 business hours.
         </p>
         <div class="pageHead-img reveal-scale">
           <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=900&h=350&fit=crop&q=80" alt="Professional communication and contact" loading="eager" />
@@ -86,14 +92,14 @@
       <div class="container">
         <div class="kpis">
           <div class="card kpiBox reveal-left">
-            <h2 style="margin:0 0 8px;">Request a free consultation</h2>
+            <h2 style="margin:0 0 8px;">Request a free credit review</h2>
             <p style="margin:0 0 20px;color:var(--muted);">
               Fill out the form and we'll get back to you with a clear plan.
             </p>
 
             <!-- Contact form via Formsubmit.co -->
             <form class="form" id="contactForm" action="https://formsubmit.co/ajax/info@psfinsolutions.com" method="POST">
-              <input type="hidden" name="_subject" value="New Inquiry from PS Fin Solutions Website" />
+              <input type="hidden" name="_subject" value="Free credit review request from psfinsolutions.com" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
               <input type="text" name="_honey" style="display:none" />
@@ -104,31 +110,23 @@
               </div>
 
               <div class="field">
-                <label for="company">Company and team size <span class="small" style="color:var(--muted)">(optional)</span></label>
-                <input id="company" name="company" placeholder="Acme Pty Ltd, 10 staff" />
-              </div>
-
-              <div class="field">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" required placeholder="john@email.com" />
               </div>
 
               <div class="field">
-                <label for="service">Service needed</label>
+                <label for="service">I’m looking for</label>
                 <select id="service" name="service" required>
                   <option value="" selected disabled>Select one</option>
-                  <option value="Smart Clock free trial">Smart Clock (free 30-day trial)</option>
-                  <option value="Custom software">Custom software / app</option>
-                  <option>Credit Repair Support</option>
-                  <option>Accounting & Bookkeeping</option>
-                  <option>Virtual Assistant</option>
-                  <option>Bundle (Multiple Services)</option>
+                  <option>Credit repair for myself</option>
+                  <option>Dispute processing for my credit repair company</option>
+                  <option>Something else</option>
                 </select>
               </div>
 
               <div class="field">
                 <label for="goal">Your goal</label>
-                <textarea id="goal" name="goal" required placeholder="Example: I have 8 remote staff and want to track their hours / I need a dashboard for my bookings / I need monthly bookkeeping..."></textarea>
+                <textarea id="goal" name="goal" required placeholder="Example: I want to buy a home in 6 months and have a few late payments and collections I don’t recognise."></textarea>
               </div>
 
               <div class="row">
@@ -202,29 +200,68 @@
 
   <footer class="footer">
     <div class="container">
-      <p style="margin:0;">
-        &copy; <span id="year"></span> PS Fin Solutions &bull; <a href="/faq/">FAQ</a> &bull; <a href="/team/">Team</a>
-      </p>
-      <p class="small" style="margin:8px 0 0;">
-        Disclaimer: We are not a law firm and do not provide legal advice. Credit repair results vary; no outcome is guaranteed.
-      </p>
-      <div class="footer-legal">
-        <a href="/disclaimer/" class="small">Disclaimer</a>
-        <a href="#" class="small">Privacy Policy</a>
-        <a href="#" class="small">Terms & Conditions</a>
+      <div class="footer-top">
+        <div class="footer-col footer-about">
+          <div class="brand" style="margin-bottom:12px;">
+            <span class="logo" aria-hidden="true"><img src="/assets/logo.svg" alt="PS Fin Solutions logo" /></span>
+            <span>PS Fin Solutions</span>
+          </div>
+          <p>Credit repair support for individuals across the USA, and dispute processing for credit repair companies.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/psfinsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/919809970890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Credit Repair</h4>
+          <a href="/services/">How it works</a>
+          <a href="/for-companies/">For companies</a>
+          <a href="/results/">Results</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/faq/">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/team/">Team</a>
+          <a href="/careers/">Careers</a>
+          <a href="/contact/">Contact</a>
+          <a href="/disclaimer/">Disclaimer</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@psfinsolutions.com">info@psfinsolutions.com</a>
+          <a href="https://wa.me/919809970890" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <p class="small" style="margin:8px 0 0;">Serving clients across the USA</p>
+        </div>
       </div>
+
+      <div class="hr"></div>
+
+      <div class="footer-bottom">
+        <p class="small">&copy; <span id="year"></span> PS Fin Solutions. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/disclaimer/" class="small">Disclaimer</a>
+        </div>
+      </div>
+
+      <p class="small footer-disclaimer">
+        PS Fin Solutions provides administrative and educational credit repair support. We are not a law firm and do not provide legal advice.
+        We only dispute items that may be inaccurate, incomplete, or unverifiable. Results vary; no score increase or removal is promised or guaranteed.
+        You have the right to dispute inaccurate information on your credit report yourself, free of charge, directly with the credit bureaus.
+      </p>
     </div>
   </footer>
 
   <script src="/assets/script.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // ?interest=smart-clock or ?interest=custom-software preselects the service
-    (function () {
-      const pick = { "smart-clock": "Smart Clock free trial", "custom-software": "Custom software" }[new URLSearchParams(location.search).get("interest")];
-      if (pick) document.getElementById("service").value = pick;
-    })();
 
     // Formsubmit.co contact form handler
     const form = document.getElementById("contactForm");
@@ -244,7 +281,9 @@
           body: JSON.stringify(Object.fromEntries(new FormData(form)))
         });
         const data = await res.json();
-        if (data.success) {
+        if (String(data.success) === "true") {
+          if (window.fbq) fbq('track', 'Lead');
+          if (window.gtag) gtag('event', 'generate_lead', { form: 'contactForm' });
           resultDiv.innerHTML = '<p class="form-success">\u2713 Message sent! We\u2019ll get back to you within 24 business hours.</p>';
           form.reset();
         } else {

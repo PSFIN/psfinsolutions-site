@@ -2,20 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Smart Clock | Time &amp; Activity Tracking for Remote Teams, No Per-User Fees</title>
-  <meta name="description" content="See your remote team's hours, activity, apps and websites on one page. 30 days free, no card. Then $200 one-time, not per user per month." />
-  <meta name="theme-color" content="#FBFAF6" />
-  <link rel="canonical" href="https://psfinsolutions.com/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PS Fin Solutions | Credit Repair Services Across the USA</title>
+  <meta name="description" content="PS Fin Solutions disputes inaccurate, incomplete, and unverifiable items on your Equifax, Experian, and TransUnion reports, with weekly updates. Free credit review. Dispute processing for credit repair companies." />
+  <meta name="theme-color" content="#0a0e17" />
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/landing.css" />
-  <meta property="og:title" content="Smart Clock: see your remote team clearly, without per-user fees" />
-  <meta property="og:description" content="Hours, activity, apps and websites for every remote worker on one page. 30 days free, then $200 one-time." />
-  <meta property="og:image" content="https://psfinsolutions.com/assets/smart-clock/performance.jpg" />
-  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/credit.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BK7LM1M92S"></script>
   <script>
@@ -45,362 +38,398 @@
   <!-- End Meta Pixel Code -->
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="top" id="top">
-    <div class="wrap">
-      <a class="brand" href="/" aria-label="Smart Clock home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B24" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
-        </span>
-        <span>Smart Clock<small>by PS Fin Solutions</small></span>
-      </a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
-      <nav class="menu" id="menu" aria-label="Main">
-        <a href="#features">Features</a>
-        <a href="#savings">Savings</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn btn-primary btn-sm" href="#start" data-cta="nav">Start free trial</a>
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="PS Fin Solutions Home">
+          <span class="logo" aria-hidden="true"><img src="/assets/logo.svg" alt="PS Fin Solutions logo" /></span>
+          <span>PS Fin Solutions</span>
+        </a>
+
+        <button class="menuBtn" data-menu aria-expanded="false" aria-controls="navlinks">Menu</button>
+
+        <div class="navlinks" id="navlinks">
+          <a href="/services/">Credit Repair</a>
+          <a href="/for-companies/">For Companies</a>
+          <a href="/results/">Results</a>
+          <a href="/pricing/">Pricing</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__toggle" aria-expanded="false">More <span class="nav-dropdown__arrow">▾</span></button>
+            <div class="nav-dropdown__menu">
+              <a href="/faq/">FAQ</a>
+              <a href="/team/">Team</a>
+              <a href="/careers/">Careers</a>
+              <a href="/contact/">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn btn-primary" href="/contact/#lead">Free Credit Review</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero" style="padding-bottom:0">
-      <div class="wrap hero-grid">
-        <div>
-          <span class="pill"><b>30 DAYS FREE</b> No card. We set it up for you.</span>
-          <h1 >Know what your remote team <span class="hl">actually does</span> all day.</h1>
-          <p class="lead">Hours, activity, apps, websites and screenshots for every person, on one clear page. Pay <strong>once</strong>, not per user every month.</p>
+    <section class="hero">
+      <div class="container">
+        <span class="badge badge-glow reveal">&#9679; Credit repair &middot; Serving clients across the USA</span>
 
-          <div class="form-card" id="start">
-            <form class="trial-form" data-place="hero" novalidate>
-              <div class="form-body">
-                <h3>Start your free 30-day trial</h3>
-                <p class="sub">Takes 30 seconds. We usually email your login within 1 business day.</p>
-                <div class="fgrid">
-                  <div class="field"><label for="h-name">Your name</label><input id="h-name" name="name" autocomplete="name" required placeholder="Jane Cooper" /></div>
-                  <div class="field"><label for="h-size">Team size</label>
-                    <select id="h-size" name="team_size" required>
-                      <option value="" selected disabled>Select</option>
-                      <option>1–5 people</option><option>6–10 people</option><option>11–20 people</option><option>20+ people</option>
-                    </select>
-                  </div>
-                  <div class="field full"><label for="h-email">Work email</label><input id="h-email" name="email" type="email" autocomplete="email" required placeholder="jane@company.com" /></div>
-                </div>
-                <button class="btn btn-primary" type="submit">Start my free trial →</button>
-                <div class="assure"><span>No credit card</span><span>Whole team included</span><span>Cancel anytime</span></div>
-                <p class="form-msg" role="status" aria-live="polite"></p>
-              </div>
-              <div class="form-done">
-                <div class="tick">✓</div>
-                <h3>You're in! Check your inbox.</h3>
-                <p>We'll set up your company space and email your login within 1 business day. Want it faster? Message us on WhatsApp.</p>
-                <a class="btn btn-wa" href="https://wa.me/919809970890?text=Hi%2C%20I%20just%20signed%20up%20for%20the%20Smart%20Clock%20free%20trial." target="_blank" rel="noopener" data-wa="success">Chat on WhatsApp</a>
-              </div>
-            </form>
+        <div class="heroGrid">
+          <div class="reveal">
+            <h1 class="hTitle">Fix what’s wrong on your credit report. <span class="text-green">The right way.</span></h1>
+            <p class="hSub">
+              We find inaccurate, incomplete, and unverifiable items on your <b>Equifax, Experian, and TransUnion</b> reports,
+              dispute them for you, and keep you updated every week, so you can get ready for that mortgage, car, or card.
+            </p>
+
+            <div class="row" style="margin-bottom:20px;">
+              <a class="btn btn-primary btn-lg" href="/contact/#lead">Get My Free Credit Review</a>
+              <a class="btn btn-ghost btn-lg" href="/results/">See Real Results</a>
+            </div>
+
+            <div class="hHighlights">
+              <span class="badge">&#10003; All 3 bureaus</span>
+              <span class="badge">&#128274; Secure document handling</span>
+              <span class="badge">&#128197; Weekly progress updates</span>
+              <span class="badge">&#9878; Lawful, documented disputes</span>
+            </div>
           </div>
-        </div>
 
-        <div class="stage">
-          <div class="screen">
-            <div class="screen-bar"><i></i><i></i><i></i></div>
-            <img src="/assets/smart-clock/home.jpg" alt="Smart Clock main screen: running timer, today's projects and who is online now" width="1600" height="800" fetchpriority="high" />
+          <div class="reveal-right">
+            <div class="hero-card">
+              <div class="partner-label">How can we help?</div>
+              <a class="path-card" href="/contact/#lead">
+                <span class="path-tag">For individuals</span>
+                <span class="path-title">Repair my credit</span>
+                <span class="path-sub">Free review of all three reports and a clear plan.</span>
+                <span class="path-go" aria-hidden="true">&rarr;</span>
+              </a>
+              <a class="path-card" href="/for-companies/">
+                <span class="path-tag">For credit repair companies</span>
+                <span class="path-title">Outsource dispute processing</span>
+                <span class="path-sub">Audits, dispute letters, and file updates under your brand.</span>
+                <span class="path-go" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
-          <div class="chip chip-b"><span class="dot"></span>Team online now<strong>6 of 8</strong></div>
-          <div class="chip chip-a">Avg. activity<strong style="color:#18B87A">57%</strong></div>
-          <div class="chip chip-c">Productive time<strong>74%</strong></div>
-        </div>
-      </div>
-
-      <div class="strip">
-        <div class="wrap">
-          <div>No per-user fees<span>$200 once, not monthly</span></div>
-          <div>Windows, Mac &amp; web<span>Small desktop app + browser</span></div>
-          <div>Hosted for you<span>No server or IT needed</span></div>
-          <div>Fair to staff<span>They agree before tracking</span></div>
         </div>
       </div>
     </section>
 
-    <!-- PROBLEM -->
-    <section>
-      <div class="wrap">
-        <div class="sec-head center rv">
-          <span class="eyebrow">The remote-team problem</span>
-          <h2>You pay for 8 hours. <br/>Do you get them?</h2>
-          <p class="lead">When your team works from home or another country, all you get is a timesheet and a hope. Smart Clock answers the three questions every owner asks.</p>
+    <div class="gradient-divider"></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item reveal delay-1"><div class="trust-number">+137</div><div class="trust-label">Largest single-bureau increase in our shared results</div></div>
+          <div class="trust-item reveal delay-2"><div class="trust-number">74</div><div class="trust-label">Items deleted on one client file</div></div>
+          <div class="trust-item reveal delay-3"><div class="trust-number">3</div><div class="trust-label">Bureaus covered on every file</div></div>
+          <div class="trust-item reveal delay-4"><div class="trust-number">24h</div><div class="trust-label">Reply time on business days</div></div>
         </div>
-        <div class="qgrid">
-          <div class="q rv"><div class="quote">Did they start on time?</div><span class="ans">Exact hours</span><p>One-click clock in and out, per client or project, with real start and finish times.</p></div>
-          <div class="q rv"><div class="quote">Were they actually working?</div><span class="ans">Proof of work</span><p>Activity for every 10 minutes, optional screenshots, and the apps and websites used.</p></div>
-          <div class="q rv"><div class="quote">Who needs a conversation?</div><span class="ans">One page</span><p>Everyone's hours, activity and tasks with a simple score, and a "needs attention" list written for you.</p></div>
+        <p class="results-disclaimer reveal">From real client files (redacted). Individual outcomes vary; no score increase is guaranteed.</p>
+      </div>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <section class="section" id="what-we-dispute">
+      <div class="container">
+        <div class="sectionTitle reveal">
+          <div class="section-label">// What we dispute</div>
+          <h2>Errors that hold your <span class="text-green">score back</span></h2>
+          <p>By law, the bureaus must investigate items you dispute and correct or remove what can’t be verified. We do that work for you.</p>
+        </div>
+        <div class="grid3">
+          <div class="tile reveal delay-1">
+            <h3>Late payments</h3>
+            <p>Late marks reported with the wrong dates, amounts, or status.</p>
+          </div>
+          <div class="tile reveal delay-2">
+            <h3>Collections</h3>
+            <p>Collection accounts that are duplicated, outdated, or can’t be verified.</p>
+          </div>
+          <div class="tile reveal delay-3">
+            <h3>Charge-offs</h3>
+            <p>Charged-off accounts with incorrect balances or reporting history.</p>
+          </div>
+          <div class="tile reveal delay-1">
+            <h3>Hard inquiries</h3>
+            <p>Inquiries you don’t recognise or didn’t authorise.</p>
+          </div>
+          <div class="tile reveal delay-2">
+            <h3>Repossessions &amp; public records</h3>
+            <p>Repossessions, judgments, and bankruptcies reported inaccurately.</p>
+          </div>
+          <div class="tile reveal delay-3">
+            <h3>Personal information</h3>
+            <p>Wrong names, old addresses, and employers that clutter your file.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="dark" id="features">
-      <div class="wrap">
-        <div class="sec-head rv">
-          <span class="eyebrow">What you get</span>
-          <h2 style="color:#fff">Your whole team, on one screen.</h2>
-        </div>
+    <div class="gradient-divider"></div>
 
-        <div class="feat rv">
-          <div>
-            <span class="eyebrow">Performance</span>
-            <h3>Spot problems before they cost you</h3>
-            <p>Pick today, last 7 days or a month. For each person: hours, average start time, activity, productive time, tasks done and a score out of 100.</p>
-            <ul class="ticks"><li>A "needs attention" list, like "low activity (29%)"</li><li>Colour bars show who is doing well at a glance</li><li>Click any name to open their day</li></ul>
-          </div>
-          <img src="/assets/smart-clock/performance.jpg" alt="Performance page" loading="lazy" width="1600" height="1455" />
-        </div>
-
-        <div class="feat flip rv">
-          <div>
-            <span class="eyebrow">Activity &amp; proof of work</span>
-            <h3>A person's day in 10-minute blocks</h3>
-            <p>Keyboard and mouse activity, screenshots if you turn them on, and the main app or website in use, for every 10 minutes they're clocked in.</p>
-            <ul class="ticks"><li>Rate apps and sites as productive or not</li><li>Only website names are kept, never full addresses</li><li>Screenshots can be switched off company-wide</li></ul>
-          </div>
-          <img src="/assets/smart-clock/activity.jpg" alt="Activity page with 10-minute blocks and screenshots" loading="lazy" width="1600" height="1588" />
-        </div>
-
-        <div class="feat rv">
-          <div>
-            <span class="eyebrow">Clock, tasks &amp; pay</span>
-            <h3>More than a time clock</h3>
-            <p>Staff pick the client or project and press Clock In. You see who's online right now, and what each person earned.</p>
-            <ul class="ticks"><li>Live "who's online" for the whole team</li><li>Tasks with due dates and alarm-style reminders</li><li>Hourly rates, allowances and payments</li><li>One-click Excel / CSV exports</li></ul>
-          </div>
-          <img src="/assets/smart-clock/home.jpg" alt="Smart Clock main screen with the running timer and who is online" loading="lazy" width="1600" height="800" />
-        </div>
-
-        <div class="center rv" style="padding-top:40px">
-          <a class="btn btn-primary" href="#start" data-cta="features">Try it free with your team →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section>
-      <div class="wrap">
-        <div class="sec-head center rv">
-          <span class="eyebrow">How it works</span>
-          <h2>Running in one day.</h2>
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="sectionTitle reveal">
+          <div class="section-label">// How it works</div>
+          <h2>Four simple <span class="text-green">steps</span></h2>
+          <p>A documented process that keeps you informed from the first review to the last round.</p>
         </div>
         <div class="steps">
-          <div class="step rv"><h3>Sign up</h3><p>Tell us your name, email and team size. That's it.</p></div>
-          <div class="step rv"><h3>We set it up</h3><p>We create your company space and add your staff and projects for you.</p></div>
-          <div class="step rv"><h3>Staff clock in</h3><p>Each person installs the small Windows or Mac app and presses Clock In.</p></div>
-          <div class="step rv"><h3>You see it all</h3><p>Open Smart Clock in your browser: hours, activity, apps and tasks for everyone.</p></div>
+          <div class="step reveal delay-1">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3>Free credit review</h3>
+            <p>Share your goals and your credit reports. We go through all three bureaus line by line.</p>
+          </div>
+          <div class="step reveal delay-2">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3>Your action plan</h3>
+            <p>You get a clear list of what we’ll dispute, what we need from you, and realistic timelines.</p>
+          </div>
+          <div class="step reveal delay-3">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3>Dispute rounds</h3>
+            <p>We prepare and send disputes to the bureaus and creditors, round by round, and track every response.</p>
+          </div>
+          <div class="step reveal delay-4">
+            <div class="step-num" aria-hidden="true">4</div>
+            <h3>Weekly updates</h3>
+            <p>You hear from us every week with what changed, what’s next, and how to keep your credit healthy.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SAVINGS CALCULATOR -->
-    <section id="savings" style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head center rv">
-          <span class="eyebrow">Pay once, not per person</span>
-          <h2>See what you'd save this year.</h2>
-          <p class="lead">Popular trackers charge for every person, every month. Smart Clock doesn't.</p>
+    <div class="gradient-divider"></div>
+
+    <section class="section" id="results">
+      <div class="container">
+        <div class="sectionTitle reveal">
+          <div class="section-label">// Real results</div>
+          <h2>Real client <span class="text-green">score improvements</span></h2>
+          <p>Credit re-import summaries from client files, showing changes across all three bureaus.</p>
         </div>
-        <div class="calc rv">
-          <div class="calc-card">
-            <div style="font-weight:600;color:var(--muted)">Your team size</div>
-            <div class="staff-num"><span id="staff">10</span><small>people</small></div>
-            <input type="range" id="staffRange" min="1" max="20" value="10" aria-label="Team size" />
-            <div class="range-lbl"><span>1</span><span>20</span></div>
-            <div class="save">
-              <div class="k">You save in year 1 vs Time Doctor</div>
-              <div class="v" id="saveVal">$1,150</div>
-              <div class="k" style="font-weight:500;margin-top:4px">From year 2 Smart Clock is just $50 a year.</div>
+        <div class="report-carousel reveal">
+          <button class="report-arrow report-arrow--left" aria-label="Scroll left" data-report-dir="-1">&#8249;</button>
+          <button class="report-arrow report-arrow--right" aria-label="Scroll right" data-report-dir="1">&#8250;</button>
+          <div class="report-carousel__track">
+            <div class="report-card" data-lightbox="0">
+              <img src="/assets/results/credit-results-01.png" alt="Client credit report summary: Equifax 635 (+81), Experian 699 (+132), TransUnion 692 (+132), 31 items deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
+            </div>
+            <div class="report-card" data-lightbox="1">
+              <img src="/assets/results/credit-results-02.png" alt="Client credit report summary: Equifax 727 (+87), Experian 729 (+89), TransUnion 729 (+87), 49 items deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
+            </div>
+            <div class="report-card" data-lightbox="2">
+              <img src="/assets/results/credit-results-03.png" alt="Client credit report summary: Equifax 633 (+38), Experian 711 (+137), TransUnion 717 (+133), 74 items deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
+            </div>
+            <div class="report-card" data-lightbox="3">
+              <img src="/assets/results/credit-results-04.png" alt="Client credit report summary: Equifax 751 (+114), Experian 715 (+136), TransUnion 769 (+121), 19 items deleted" loading="lazy" />
+              <div class="report-card__overlay"><span>Click to enlarge</span></div>
             </div>
           </div>
-          <div class="calc-card big">
-            <div style="font-weight:600;color:#AEB7C9;margin-bottom:20px">Cost for year 1</div>
-            <div class="bars">
-              <div class="bar-row us"><div class="top-line"><span>Smart Clock</span><b id="scCost">$250</b></div><div class="bar"><span id="scBar"></span></div></div>
-              <div class="bar-row"><div class="top-line"><span>Hubstaff (Team)</span><b id="hsCost">$1,200</b></div><div class="bar"><span id="hsBar"></span></div></div>
-              <div class="bar-row"><div class="top-line"><span>Time Doctor (Standard)</span><b id="tdCost">$1,400</b></div><div class="bar"><span id="tdBar"></span></div></div>
-            </div>
-            <p class="note">Smart Clock year 1 = $200 setup + $50 support. Hubstaff Team about $10 and Time Doctor Standard about $11.67 per user per month, billed yearly (public prices, October 2026; monthly billing costs more). Hubstaff and Time Doctor are trademarks of their owners; we are not connected to them.</p>
-          </div>
+        </div>
+        <p class="results-disclaimer reveal">
+          Results from actual client files (redacted). Individual outcomes vary. <a href="/disclaimer/" style="color:var(--brand);">Full disclaimer</a>
+        </p>
+        <div class="text-center reveal" style="margin-top:24px;">
+          <a class="btn btn-primary" href="/results/">View All Results &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head center rv">
-          <span class="eyebrow">Simple pricing</span>
-          <h2>Try it free. Then pay once.</h2>
-          <p class="lead">We host and look after everything. No server, no database, no IT person.</p>
-        </div>
-        <div class="prices">
-          <div class="price rv">
-            <div class="label">Free trial</div>
-            <div class="amt">$0</div>
-            <div class="per">for 30 days</div>
-            <ul class="ticks"><li>Every feature switched on</li><li>Your whole team</li><li>Help to get started</li><li>No card or payment details</li></ul>
-            <a class="btn btn-dark" href="#start" data-cta="price-trial">Start free trial</a>
-          </div>
-          <div class="price feat-p rv">
-            <span class="tag">After your trial</span>
-            <div class="label">One-time setup</div>
-            <div class="amt">$200</div>
-            <div class="per">once, only if you keep it</div>
-            <ul class="ticks"><li>Keep everything from your trial</li><li>Windows, Mac and web apps</li><li>Staff, projects and clients added for you</li><li>An online walkthrough</li><li>No monthly or per-user fees</li></ul>
-            <a class="btn btn-primary" href="#start" data-cta="price-setup">Start free trial</a>
-          </div>
-          <div class="price rv">
-            <div class="label">Support &amp; hosting</div>
-            <div class="amt">$50</div>
-            <div class="per">per year</div>
-            <ul class="ticks"><li>Hosting and backups</li><li>Help by email or WhatsApp</li><li>Bug fixes and updates</li><li>Small changes and settings</li></ul>
-            <a class="btn" href="https://wa.me/919809970890?text=Hi%2C%20I%20have%20a%20question%20about%20Smart%20Clock." target="_blank" rel="noopener" data-wa="pricing">Ask a question</a>
-          </div>
-        </div>
-        <p class="fine center">Introductory price for our first customers, in US dollars. For more than 20 staff we confirm the price with you before your trial ends.</p>
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>
+      <button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>
+      <div class="lightbox-content"><img id="lightboxImg" src="" alt="Credit report detail" /></div>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
 
-        <div class="tbl-wrap rv">
-          <table>
-            <tr><th>Feature</th><th class="us">Smart Clock</th><th>Hubstaff</th><th>Time Doctor</th></tr>
-            <tr><td>Clock in / out per project</td><td class="us y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Activity levels and screenshots</td><td class="us y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Apps &amp; websites used</td><td class="us y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Performance page with a score</td><td class="us y">✓</td><td>Add-on</td><td>Premium plan</td></tr>
-            <tr><td>Tasks and alarm reminders</td><td class="us y">✓</td><td>Add-on</td><td>Projects &amp; tasks</td></tr>
-            <tr><td>Free trial</td><td class="us">30 days</td><td>14 days</td><td>14 days</td></tr>
-            <tr><td>Changes made for your business</td><td class="us y">✓</td><td>—</td><td>—</td></tr>
-            <tr><td>Support</td><td class="us">Direct from the people who built it</td><td>Help desk</td><td>Help desk</td></tr>
-          </table>
-        </div>
-      </div>
-    </section>
+    <div class="gradient-divider"></div>
 
-    <!-- TRUST -->
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head center rv">
-          <span class="eyebrow">Fair and transparent</span>
-          <h2>Built so your team can trust it too.</h2>
-        </div>
-        <div class="trust">
-          <div class="q rv"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><h3>They agree first</h3><p>Each person is asked before activity, screenshots or apps are recorded, and their answer is saved.</p></div>
-          <div class="q rv"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Only while clocked in</h3><p>Tracking runs only while they're clocked in, on the computer where they clocked in.</p></div>
-          <div class="q rv"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Nothing hidden</h3><p>A desk robot shows when tracking is on, and staff can see their own activity.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOUNDER -->
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="founder rv">
-          <img src="/assets/Shinod.jpeg" alt="Shinod Vengaloor, founder of PS Fin Solutions" loading="lazy" />
+    <section class="section" id="for-companies">
+      <div class="container">
+        <div class="b2b-band reveal">
           <div>
-            <span class="eyebrow">Built by a remote-team owner</span>
-            <h2>"We built it because we needed it."</h2>
-            <p>I'm Shinod. I run a remote team and work with small businesses in the US, UK and Australia. We built Smart Clock for our own remote team first, and we use it every day.</p>
-            <p>You won't get a ticket queue. You get me and my team, on email or WhatsApp. That's also why you can try it for 30 days before paying anything.</p>
-            <div class="creds"><span>QuickBooks ProAdvisor</span><span>Top Rated on Upwork</span><span>Used daily by our own team</span></div>
+            <div class="section-label">// For credit repair companies</div>
+            <h2>Run a credit repair company? <span class="text-green">We’ll handle the disputes.</span></h2>
+            <p>Our back-office team does the dispute work for agencies, inside the software you already use and under your brand, so your team can focus on sales and clients.</p>
+            <div class="row">
+              <a class="btn btn-primary btn-lg" href="/for-companies/">Dispute Processing for Companies</a>
+            </div>
+          </div>
+          <ul class="b2b-list">
+            <li>Credit report audits</li>
+            <li>Round-by-round dispute letters</li>
+            <li>CFPB complaints and escalations</li>
+            <li>Client file updates after every round</li>
+            <li>Usually 24&ndash;48 hour turnaround</li>
+            <li>Free trial on your first few files</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="gradient-divider"></div>
+
+    <section class="section" id="why-choose">
+      <div class="container">
+        <div class="sectionTitle reveal">
+          <div class="section-label">// Why us</div>
+          <h2>Why choose <span class="text-green">PS Fin Solutions</span></h2>
+          <p>Honest work, clear communication, and no empty promises.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-list reveal-left">
+            <div class="why-item">
+              <div class="why-check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--brand2)"/><path d="M14 7l-5.5 5.5L6 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div><h3>A plan built for your file</h3><p>Every client gets an action plan based on their own reports and goals, not a template.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--brand2)"/><path d="M14 7l-5.5 5.5L6 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div><h3>Lawful and documented</h3><p>We only dispute items that may be inaccurate, incomplete, or unverifiable, and keep a clean record of every letter.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--brand2)"/><path d="M14 7l-5.5 5.5L6 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div><h3>You always know where things stand</h3><p>Weekly updates on what was sent, what came back, and what happens next.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="var(--brand2)"/><path d="M14 7l-5.5 5.5L6 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div><h3>Habits that last</h3><p>We show you how to keep your credit healthy once the disputes are done.</p></div>
+            </div>
+          </div>
+          <div class="callout reveal-right">
+            <h3 style="margin:0 0 8px;">Important disclosures</h3>
+            <ul class="disclosure-list">
+              <li><b>No guarantees.</b> Results depend on your file and on how bureaus and creditors respond.</li>
+              <li><b>Not legal advice.</b> We are not a law firm.</li>
+              <li><b>Accurate information stays.</b> We never ask you to misrepresent anything or create a new identity.</li>
+              <li><b>You can do this yourself.</b> You have the right to dispute errors directly with the bureaus for free.</li>
+            </ul>
+            <div class="hr"></div>
+            <a class="btn btn-primary" href="/pricing/">View Plans</a>
+            <a class="btn" href="/faq/" style="margin-left:8px;">Read FAQs</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head center rv"><span class="eyebrow">Questions</span><h2>Good to know.</h2></div>
-        <div class="faq rv">
-          <details><summary>What happens after the 30-day trial?</summary><p>If you like it, you pay the $200 setup once and keep everything, including your trial data. Support and hosting is $50 a year. If not, we simply close your account. No card is needed to start.</p></details>
-          <details><summary>Do I need my own server or IT person?</summary><p>No. Smart Clock is hosted for you on secure cloud servers that we set up and look after, including backups.</p></details>
-          <details><summary>Does it work on Mac and Windows?</summary><p>Yes. There are Windows and Mac desktop apps, plus a web version that opens in any browser. Updates install automatically.</p></details>
-          <details><summary>Is there a limit on staff?</summary><p>The price is for small and growing teams. For more than 20 staff, we confirm the price with you before your trial ends, so there are no surprises.</p></details>
-          <details><summary>Is it legal to monitor staff?</summary><p>Smart Clock is built to be open: staff agree before tracking starts, it only runs while they're clocked in, and they can see their own activity. Rules differ by country and state, so check what applies to your business.</p></details>
-          <details><summary>Can you change it for my business?</summary><p>Yes. Small changes are part of support. Bigger features or a custom version are quoted separately after a quick chat.</p></details>
-        </div>
-      </div>
-    </section>
+    <div class="gradient-divider"></div>
 
-    <!-- FINAL CTA -->
-    <section class="final">
-      <div class="wrap final-grid">
-        <div>
-          <h2>See your whole team clearly, starting this week.</h2>
-          <p class="lead">30 days free. No card. We do the setup, usually within a day.</p>
-          <div class="alt">
-            <a class="btn btn-wa" href="https://wa.me/919809970890?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Smart%20Clock." target="_blank" rel="noopener" data-wa="final">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41A11.82 11.82 0 0012.05 0zm0 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm5.42-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
-              Chat on WhatsApp
-            </a>
-            <span>or email <a href="mailto:info@psfinsolutions.com" style="color:#fff">info@psfinsolutions.com</a></span>
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal-scale">
+          <h2>Ready to see what’s on your report?</h2>
+          <p>Start with a free credit review. No pressure, no hidden fees, just an honest look at your file.</p>
+          <div class="row" style="justify-content:center;">
+            <a class="btn btn-primary btn-lg" href="/contact/#lead">Get My Free Credit Review</a>
+            <a class="btn btn-ghost btn-lg" href="https://wa.me/919809970890" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
           </div>
-        </div>
-        <div class="form-card">
-          <form class="trial-form" data-place="final" novalidate>
-            <div class="form-body">
-              <h3>Start your free 30-day trial</h3>
-              <p class="sub">We usually email your login within 1 business day.</p>
-              <div class="fgrid">
-                <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required placeholder="Jane Cooper" /></div>
-                <div class="field"><label for="f-size">Team size</label>
-                  <select id="f-size" name="team_size" required>
-                    <option value="" selected disabled>Select</option>
-                    <option>1–5 people</option><option>6–10 people</option><option>11–20 people</option><option>20+ people</option>
-                  </select>
-                </div>
-                <div class="field full"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="jane@company.com" /></div>
-              </div>
-              <button class="btn btn-primary" type="submit">Start my free trial →</button>
-              <div class="assure"><span>No credit card</span><span>Whole team included</span><span>Cancel anytime</span></div>
-              <p class="form-msg" role="status" aria-live="polite"></p>
-            </div>
-            <div class="form-done">
-              <div class="tick">✓</div>
-              <h3>You're in! Check your inbox.</h3>
-              <p>We'll set up your company space and email your login within 1 business day.</p>
-              <a class="btn btn-wa" href="https://wa.me/919809970890?text=Hi%2C%20I%20just%20signed%20up%20for%20the%20Smart%20Clock%20free%20trial." target="_blank" rel="noopener" data-wa="success">Chat on WhatsApp</a>
-            </div>
-          </form>
+          <p class="cta-reassurance">We reply within 24 business hours</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="foot">
-        <div>
-          <a class="brand" href="/" style="margin-bottom:12px"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#FF5B24" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span><span>Smart Clock</span></a>
-          <p>Time, activity and performance tracking for remote teams. Made by PS Fin Solutions.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col footer-about">
+          <div class="brand" style="margin-bottom:12px;">
+            <span class="logo" aria-hidden="true"><img src="/assets/logo.svg" alt="PS Fin Solutions logo" /></span>
+            <span>PS Fin Solutions</span>
+          </div>
+          <p>Credit repair support for individuals across the USA, and dispute processing for credit repair companies.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/psfinsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/919809970890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
         </div>
-        <div><h4>Smart Clock</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="https://smart-clock.pages.dev" target="_blank" rel="noopener">Customer sign in</a></div>
-        <div><h4>Company</h4><a href="/software/">Custom software</a><a href="/services/">Other services</a><a href="/team/">Team</a><a href="/careers/">Careers</a></div>
-        <div><h4>Contact</h4><a href="mailto:info@psfinsolutions.com">info@psfinsolutions.com</a><a href="https://wa.me/919809970890" target="_blank" rel="noopener" data-wa="footer">WhatsApp</a><a href="/disclaimer/">Disclaimer</a></div>
+
+        <div class="footer-col">
+          <h4>Credit Repair</h4>
+          <a href="/services/">How it works</a>
+          <a href="/for-companies/">For companies</a>
+          <a href="/results/">Results</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/faq/">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/team/">Team</a>
+          <a href="/careers/">Careers</a>
+          <a href="/contact/">Contact</a>
+          <a href="/disclaimer/">Disclaimer</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@psfinsolutions.com">info@psfinsolutions.com</a>
+          <a href="https://wa.me/919809970890" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <p class="small" style="margin:8px 0 0;">Serving clients across the USA</p>
+        </div>
       </div>
-      <div class="legal">© <span id="year"></span> PS Fin Solutions. Hubstaff and Time Doctor are trademarks of their owners. PS Fin Solutions is not connected to them. Competitor prices are from public sources (October 2026) and may change.</div>
+
+      <div class="hr"></div>
+
+      <div class="footer-bottom">
+        <p class="small">&copy; <span id="year"></span> PS Fin Solutions. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/disclaimer/" class="small">Disclaimer</a>
+        </div>
+      </div>
+
+      <p class="small footer-disclaimer">
+        PS Fin Solutions provides administrative and educational credit repair support. We are not a law firm and do not provide legal advice.
+        We only dispute items that may be inaccurate, incomplete, or unverifiable. Results vary; no score increase or removal is promised or guaranteed.
+        You have the right to dispute inaccurate information on your credit report yourself, free of charge, directly with the credit bureaus.
+      </p>
     </div>
   </footer>
 
-  <a href="https://wa.me/919809970890?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Smart%20Clock." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-wa="float">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41A11.82 11.82 0 0012.05 0zm5.42 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+  <script src="/assets/script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+  (function(){
+    var track = document.querySelector('.report-carousel__track');
+    if (track) document.querySelectorAll('[data-report-dir]').forEach(function(btn){
+      btn.addEventListener('click', function(){ track.scrollBy({ left: parseInt(this.getAttribute('data-report-dir'),10) * 440, behavior: 'smooth' }); });
+    });
+    var images = ['/assets/results/credit-results-01.png','/assets/results/credit-results-02.png','/assets/results/credit-results-03.png','/assets/results/credit-results-04.png'];
+    var overlay = document.getElementById('lightboxOverlay'), lbImg = document.getElementById('lightboxImg'), counter = document.getElementById('lightboxCounter'), current = 0;
+    if (!overlay) return;
+    function show(i){ current = i; lbImg.src = images[i]; counter.textContent = (i+1) + ' / ' + images.length; overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function hide(){ overlay.classList.remove('active'); document.body.style.overflow = ''; }
+    document.querySelectorAll('[data-lightbox]').forEach(function(card){ card.addEventListener('click', function(){ show(parseInt(this.getAttribute('data-lightbox'),10)); }); });
+    overlay.querySelector('.lightbox-close').addEventListener('click', hide);
+    overlay.querySelector('.lightbox-prev').addEventListener('click', function(){ show((current - 1 + images.length) % images.length); });
+    overlay.querySelector('.lightbox-next').addEventListener('click', function(){ show((current + 1) % images.length); });
+    overlay.addEventListener('click', function(e){ if (e.target === overlay) hide(); });
+    document.addEventListener('keydown', function(e){
+      if (!overlay.classList.contains('active')) return;
+      if (e.key === 'Escape') hide();
+      if (e.key === 'ArrowLeft') show((current - 1 + images.length) % images.length);
+      if (e.key === 'ArrowRight') show((current + 1) % images.length);
+    });
+  })();
+  </script>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919809970890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
-
-  <div class="mbar" id="mbar">
-    <a class="btn btn-primary" href="#start" data-cta="mobile-bar">Start free trial</a>
-    <a class="btn btn-wa" href="https://wa.me/919809970890?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Smart%20Clock." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-wa="mobile-bar">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:22px;height:22px"><path d="M12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 005.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41A11.82 11.82 0 0012.05 0zm5.42 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
-    </a>
-  </div>
-
-  <script src="/assets/landing.js"></script>
 </body>
 </html>
