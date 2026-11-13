@@ -35,14 +35,14 @@
 /* Band for credit repair companies */
 .b2b-band {
   display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center;
-  padding: 40px; border-radius: var(--radius2); border: 1px solid rgba(0,255,136,.25);
-  background: linear-gradient(135deg, rgba(0,255,136,.08), rgba(20,27,45,.9) 55%);
+  padding: 40px; border-radius: var(--radius2); border: 1px solid rgba(139,92,246,.25);
+  background: linear-gradient(135deg, rgba(139,92,246,.08), rgba(16,16,42,.92) 55%);
 }
 .b2b-band h2 { margin: 8px 0 12px; }
 .b2b-band p { color: var(--muted); margin: 0 0 20px; line-height: 1.7; }
 .b2b-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .b2b-list li {
-  position: relative; padding: 12px 14px 12px 40px; border-radius: 12px; background: rgba(10,14,23,.55);
+  position: relative; padding: 12px 14px 12px 40px; border-radius: 12px; background: rgba(7,7,26,.55);
   border: 1px solid var(--line);
 }
 .b2b-list li::before { content: "✓"; position: absolute; left: 14px; color: var(--brand); font-weight: 800; }
